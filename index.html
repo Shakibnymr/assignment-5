@@ -1,0 +1,368 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="cupcake">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Summer sale</title>
+    <!-- font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Work+Sans:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      body {
+        font-family: "Work Sans", sans-serif; 
+      }
+    </style>
+    <link
+      href="https://cdn.jsdelivr.net/npm/daisyui@3.5.1/dist/full.css"
+      rel="stylesheet"
+      type="text/css"
+    />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- common color -->
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              clifford: "#da373d",
+              "common-color": "#E527B2",
+            },
+          },
+        },
+      };
+    </script>
+  </head>
+  <body>
+    <header>
+      <div
+        class="container mx-auto flex flex-col md:flex-row lg:flex-row justify-center items-center"
+      >
+        <!-- banner articles -->
+        <div class="text-center space-y-7">
+          <h1 class="text-3xl font-medium">---SALE FEVER---</h1>
+          <p class="text-5xl font-bold">
+            Purchase TK 200 or above & get
+            <span class="text-common-color">20% off</span>
+          </p>
+
+          <p class="inline text-base font-semibold">Use Promo Code</p>
+
+          <button class="btn btn-secondary">SELL200</button>
+        </div>
+        <!-- banner photo -->
+        <div>
+          <img src="./images/Summer 1.png" alt="" />
+        </div>
+      </div>
+    </header>
+    <main>
+      
+      <h1 class="text-4xl font-semibold container mx-auto mt-10">
+        Kitchenware
+      </h1>
+      <div class="flex flex-col-reverse md:flex-col-reverse lg:flex-row mt-24">
+        <!-- card container -->
+        <div class="grid grid-cols-1 lg:grid-cols-3">
+          <!-- card 1 -->
+          <div
+            id="card1"
+            onclick="handleClick(this)"
+            class="card w-96 bg-base-100 shadow-xl"
+          >
+            <figure><img src="/images/prod1.png" alt="Shoes" /></figure>
+            <div class="card-body">
+              <div class="rating">
+                <input
+                  type="radio"
+                  name="rating-4"
+                  class="mask mask-star-2 bg-amber-500"
+                />
+                <input
+                  type="radio"
+                  name="rating-4"
+                  class="mask mask-star-2 bg-amber-500"
+                />
+                <input
+                  type="radio"
+                  name="rating-4"
+                  class="mask mask-star-2 bg-amber-500"
+                />
+                <input
+                  type="radio"
+                  name="rating-4"
+                  class="mask mask-star-2 bg-amber-500"
+                />
+                <input
+                  type="radio"
+                  name="rating-4"
+                  class="mask mask-star-2 bg-amber-500"
+                />
+              </div>
+              <h2 class="card-title">K. Accessories</h2>
+              <p>49.00 TK</p>
+            </div>
+          </div>
+          <!-- card 2 -->
+          <div
+            id="card2"
+            onclick="handleClick(this)"
+            class="card w-96 bg-base-100 shadow-xl"
+          >
+            <figure><img src="/images/prod2.png" alt="Shoes" /></figure>
+            <div class="card-body">
+              <div class="rating">
+                <input
+                  type="radio"
+                  name="rating-4"
+                  class="mask mask-star-2 bg-amber-500"
+                />
+                <input
+                  type="radio"
+                  name="rating-4"
+                  class="mask mask-star-2 bg-amber-500"
+                />
+                <input
+                  type="radio"
+                  name="rating-4"
+                  class="mask mask-star-2 bg-amber-500"
+                />
+                <input
+                  type="radio"
+                  name="rating-4"
+                  class="mask mask-star-2 bg-amber-500"
+                />
+                <input
+                  type="radio"
+                  name="rating-4"
+                  class="mask mask-star-2 bg-amber-500"
+                />
+              </div>
+              <h2 class="card-title">Wooden Cutting Board</h2>
+              <p>25.00 TK</p>
+            </div>
+          </div>
+          <!-- card 3 -->
+          <div
+            id="card-3"
+            onclick="handleClick(this)"
+            class="card w-96 bg-base-100 shadow-xl"
+          >
+            <figure><img src="/images/prod3.png" alt="Shoes" /></figure>
+            <div class="card-body">
+              <div class="rating">
+                <input
+                  type="radio"
+                  name="rating-4"
+                  class="mask mask-star-2 bg-amber-500"
+                />
+                <input
+                  type="radio"
+                  name="rating-4"
+                  class="mask mask-star-2 bg-amber-500"
+                />
+                <input
+                  type="radio"
+                  name="rating-4"
+                  class="mask mask-star-2 bg-amber-500"
+                />
+                <input
+                  type="radio"
+                  name="rating-4"
+                  class="mask mask-star-2 bg-amber-500"
+                />
+                <input
+                  type="radio"
+                  name="rating-4"
+                  class="mask mask-star-2 bg-amber-500"
+                />
+              </div>
+              <h2 class="card-title">Home Cooker</h2>
+              <p>49.00 TK</p>
+            </div>
+          </div>
+        </div>
+        <!-- coupon -->
+        <div
+          class="space-y-3 flex-1 md:flex-1 lg:flex-1 pl-5 h-[300px] text-lg font-medium"
+        >
+          <div>
+            <h1>Have coupon?</h1>
+            <input
+              type="text"
+              name=""
+              id="coupon-field"
+              placeholder="Coupon code"
+              class="p-2 w-[140px] inline"
+            />
+            <button class="btn btn-secondary" id="apply-btn">Apply</button>
+          </div>
+          <div id="selected-products">
+            <!-- product names -->
+          </div>
+          <div class="space-y-3">
+            <h1>Total price: <span id="total-price">0</span>TK</h1>
+            <h1>Discount: <span id="discount">0</span>TK</h1>
+            <h1>Total: <span id="total-final">0</span>TK</h1>
+
+            <button
+              class="btn btn-secondary bg-common-color p-2 w-full "
+              id="Purchase-btn"
+            >
+              Make Purchase
+            </button>
+            
+          </div>
+        </div>
+      </div>
+
+      <h1 class="text-4xl font-semibold container mx-auto mt-10">Sportswear</h1>
+      <div class="flex flex-col-reverse md:flex-col-reverse lg:flex-row mt-24">
+        <!-- card container sports -->
+        <div class="grid grid-cols-1 lg:grid-cols-3">
+          <!-- card 4 -->
+          <div
+            onclick="handleClick(this)"
+            class="card w-96 bg-base-100 shadow-xl"
+          >
+            <figure><img src="/images/prod4.png" alt="Shoes" /></figure>
+            <div class="card-body">
+              <div class="rating">
+                <input
+                  type="radio"
+                  name="rating-4"
+                  class="mask mask-star-2 bg-amber-500"
+                />
+                <input
+                  type="radio"
+                  name="rating-4"
+                  class="mask mask-star-2 bg-amber-500"
+                />
+                <input
+                  type="radio"
+                  name="rating-4"
+                  class="mask mask-star-2 bg-amber-500"
+                />
+                <input
+                  type="radio"
+                  name="rating-4"
+                  class="mask mask-star-2 bg-amber-500"
+                />
+                <input
+                  type="radio"
+                  name="rating-4"
+                  class="mask mask-star-2 bg-amber-500"
+                />
+              </div>
+              <h2 class="card-title">Sports Back Cap</h2>
+              <p>49.00 TK</p>
+            </div>
+          </div>
+          <!-- card 5 -->
+          <div
+            onclick="handleClick(this)"
+            class="card w-96 bg-base-100 shadow-xl"
+          >
+            <figure><img src="/images/prod5.png" alt="Shoes" /></figure>
+            <div class="card-body">
+              <div class="rating">
+                <input
+                  type="radio"
+                  name="rating-4"
+                  class="mask mask-star-2 bg-amber-500"
+                />
+                <input
+                  type="radio"
+                  name="rating-4"
+                  class="mask mask-star-2 bg-amber-500"
+                />
+                <input
+                  type="radio"
+                  name="rating-4"
+                  class="mask mask-star-2 bg-amber-500"
+                />
+                <input
+                  type="radio"
+                  name="rating-4"
+                  class="mask mask-star-2 bg-amber-500"
+                />
+                <input
+                  type="radio"
+                  name="rating-4"
+                  class="mask mask-star-2 bg-amber-500"
+                />
+              </div>
+              <h2 class="card-title">Full Jersey Set</h2>
+              <p>69.00 TK</p>
+            </div>
+          </div>
+          <!-- card 6 -->
+          <div
+            onclick="handleClick(this)"
+            class="card w-96 bg-base-100 shadow-xl"
+          >
+            <figure><img src="/images/prod6.png" alt="Shoes" /></figure>
+            <div class="card-body">
+              <div class="rating">
+                <input
+                  type="radio"
+                  name="rating-4"
+                  class="mask mask-star-2 bg-amber-500"
+                />
+                <input
+                  type="radio"
+                  name="rating-4"
+                  class="mask mask-star-2 bg-amber-500"
+                />
+                <input
+                  type="radio"
+                  name="rating-4"
+                  class="mask mask-star-2 bg-amber-500"
+                />
+                <input
+                  type="radio"
+                  name="rating-4"
+                  class="mask mask-star-2 bg-amber-500"
+                />
+                <input
+                  type="radio"
+                  name="rating-4"
+                  class="mask mask-star-2 bg-amber-500"
+                />
+              </div>
+              <h2 class="card-title">Sports Cates</h2>
+              <p>159.00 TK</p>
+            </div>
+          </div>
+        </div>
+        <!-- coupon -->
+        <div class="space-y-3 hidden">
+          <div>
+            <h1>Have coupon?</h1>
+            <input
+              type="text"
+              name=""
+              id="coupon-code"
+              placeholder="Coupon code"
+              class="p-2 w-[140px] inline"
+            />
+            <button class="btn btn-secondary">Apply</button>
+          </div>
+          <div>
+            <!-- product names -->
+          </div>
+          <div class="space-y-3">
+            <h1>Total price: <span></span></h1>
+            <h1>Discount: <span></span></h1>
+            <h1>Total: <span></span></h1>
+          </div>
+        </div>
+      </div>
+      
+    </main>
+    <script src="./a5.js"></script>
+  </body>
+</html>
